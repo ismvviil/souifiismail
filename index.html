@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ismail Souifi — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+     <rect width='64' height='64' rx='14' fill='%23080808'/>
+     <rect x='2' y='2' width='60' height='60' rx='12' fill='none'
+           stroke='%23c8ff57' stroke-width='2' opacity='.4'/>
+     <text x='32' y='44' font-family='Arial Black,sans-serif'
+           font-size='28' font-weight='900' fill='%23c8ff57'
+           text-anchor='middle' letter-spacing='-2'>IS</text>
+     <circle cx='48' cy='16' r='4' fill='%23c8ff57'/>
+   </svg>">
+</head>
+<body>
+
+<!-- ─── Cursor ─── -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- ─── Scroll Progress ─── -->
+<div id="scroll-prog"></div>
+
+<!-- ══════════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">IS<em>.</em></a>
+
+  <ul class="nav-pills" id="navPills">
+    <li><a href="#about"           data-s="about">        <span lang-fr>À Propos</span>    <span lang-en>About</span></a></li>
+    <li><a href="#skills"          data-s="skills">       <span lang-fr>Compétences</span> <span lang-en>Skills</span></a></li>
+    <li><a href="#projects"        data-s="projects">     <span lang-fr>Projets</span>     <span lang-en>Projects</span></a></li>
+    <li><a href="#experience"      data-s="experience">   <span lang-fr>Expérience</span>  <span lang-en>Experience</span></a></li>
+    <li><a href="#education"       data-s="education">    <span lang-fr>Formation</span>   <span lang-en>Education</span></a></li>
+    <li><a href="#certifications"  data-s="certifications">Certifs</a></li>
+    <li><a href="#recommendations" data-s="recommendations"><span lang-fr>Références</span><span lang-en>References</span></a></li>
+    <li><a href="#contact"         data-s="contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-end">
+    <!-- Download CV -->
+    <a href="cv-ismail-souifi.pdf" download class="btn-cv-nav">
+      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span lang-fr>Télécharger CV</span>
+      <span lang-en>Download CV</span>
+    </a>
+
+    <div class="lang-sw">
+      <button class="active" data-l="fr">FR</button>
+      <button data-l="en">EN</button>
+    </div>
+
+    <a href="mailto:souifiismail@gmail.com" class="btn-contact-nav">
+      <span lang-fr>M'écrire</span><span lang-en>Email Me</span>
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu drawer -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"           data-s="about">        <span lang-fr>À Propos</span>    <span lang-en>About</span></a>
+  <a href="#skills"          data-s="skills">       <span lang-fr>Compétences</span> <span lang-en>Skills</span></a>
+  <a href="#projects"        data-s="projects">     <span lang-fr>Projets</span>     <span lang-en>Projects</span></a>
+  <a href="#experience"      data-s="experience">   <span lang-fr>Expérience</span>  <span lang-en>Experience</span></a>
+  <a href="#education"       data-s="education">    <span lang-fr>Formation</span>   <span lang-en>Education</span></a>
+  <a href="#certifications"  data-s="certifications">Certifications</a>
+  <a href="#recommendations" data-s="recommendations"><span lang-fr>Références</span><span lang-en>References</span></a>
+  <a href="#contact"         data-s="contact">Contact</a>
+  <div class="mobile-menu-foot">
+    <a href="cv-ismail-souifi.pdf" download class="btn btn-ghost" style="font-size:.7rem;padding:.5rem 1.2rem">
+      <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span lang-fr>Télécharger CV</span><span lang-en>Download CV</span>
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div style="display:grid;grid-template-columns:1fr 380px;align-items:center;gap:4rem;min-height:100vh;max-width:1140px;margin:0 auto;padding:0 2rem;padding-top:var(--nav-h)">
+
+    <div class="hero-left">
+      <div class="hero-grid-deco"></div>
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+
+      <div class="hero-badge rv">
+        <span class="badge-dot"></span>
+        <span lang-fr>Disponible · Casablanca, Maroc 🇲🇦</span>
+        <span lang-en>Available · Casablanca, Morocco 🇲🇦</span>
+      </div>
+
+      <h1 class="hero-name rv d1">
+        Ismail<br><span class="outline">Souifi</span>
+      </h1>
+
+      <!-- Typewriter subtitle -->
+      <p class="hero-desc rv d2" style="margin-bottom:1rem">
+        <span id="typewriter-target" style="color:var(--lime);font-weight:600"></span>
+      </p>
+
+      <p class="hero-desc rv d2">
+        <span lang-fr>Étudiant en <strong>Master Qualité du Logiciel</strong> à la FS. Passionné de développement full-stack, d'assurance qualité et de méthodologies Agile — je construis des solutions <strong>robustes et élégantes</strong>.</span>
+        <span lang-en><strong>Software Quality Master's</strong> student at FS. Passionate about full-stack development, quality assurance and Agile — building <strong>robust, elegant</strong> solutions.</span>
+      </p>
+
+      <div class="hero-actions rv d3">
+        <a href="#projects" class="btn btn-lime">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          <span lang-fr>Voir mes projets</span><span lang-en>View Projects</span>
+        </a>
+        <a href="cv-ismail-souifi.pdf" download class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span lang-fr>Mon CV</span><span lang-en>My CV</span>
+        </a>
+        <a href="https://github.com/ismvviil" target="_blank" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- Photo -->
+    <div class="hero-right rv d2">
+      <div class="photo-deco"></div>
+      <div class="stat-badge sb-1 rv d3">
+        <div class="num">4+</div>
+        <div class="lbl" lang-fr>Projets</div><div class="lbl" lang-en>Projects</div>
+      </div>
+      <div class="stat-badge sb-2 rv d4">
+        <div class="num">2x</div>
+        <div class="lbl" lang-fr>Stages</div><div class="lbl" lang-en>Internships</div>
+      </div>
+      <div class="photo-frame">
+        <img src="photo.jpg" alt="Ismail Souifi">
+        <div class="photo-caption">
+          <h3>Ismail Souifi</h3>
+          <p lang-fr>Développeur Full-Stack &amp; QA</p>
+          <p lang-en>Full-Stack Developer &amp; QA</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   ABOUT
+══════════════════════════════════════════ -->
+<section id="about" class="alt">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img rv">
+        <div class="about-img-ph">IS</div>
+        <div class="about-img-name">
+          <h4>Ismail Souifi</h4>
+          <span lang-fr>Développeur Full-Stack · Fès</span>
+          <span lang-en>Full-Stack Developer · Fès</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-tag rv" lang-fr>À Propos de Moi</p>
+        <p class="section-tag rv" lang-en>About Me</p>
+        <h2 class="section-h rv">
+          <span lang-fr>Qui<br>Suis<span class="hi">-Je?</span></span>
+          <span lang-en>Who<br>Am<span class="hi"> I?</span></span>
+        </h2>
+
+        <p class="rv d1" lang-fr>Étudiant en <strong>Master Qualité du Logiciel</strong> à la Faculté des Sciences de Fès, titulaire d'une Licence en Ingénierie des Systèmes d'Information et Réseaux. Je combine passion technique et esprit analytique.</p>
+        <p class="rv d1" lang-en><strong>Software Quality Master's</strong> student at the Faculty of Sciences of Fès, holding a Bachelor's in Information Systems and Networks Engineering. I blend technical passion with analytical thinking.</p>
+
+        <p class="rv d2" lang-fr>Fort d'une expérience pratique en <strong>développement web full-stack</strong> (React, FastAPI, Spring Boot…), je suis également membre actif des clubs de photographie et de cybersécurité à l'EST Safi.</p>
+        <p class="rv d2" lang-en>With hands-on experience in <strong>full-stack web development</strong> (React, FastAPI, Spring Boot…), I'm also an active member of photography and cybersecurity clubs at EST Safi.</p>
+
+        <div class="info-grid rv d3">
+          <div class="info-row">
+            <span class="info-lbl" lang-fr>Localisation</span><span class="info-lbl" lang-en>Location</span>
+            <span class="info-val">Fès, Maroc 🇲🇦</span>
+          </div>
+          <div class="info-row">
+            <span class="info-lbl">Email</span>
+            <span class="info-val"><a href="mailto:souifiismail@gmail.com">souifiismail@gmail.com</a></span>
+          </div>
+          <div class="info-row">
+            <span class="info-lbl">LinkedIn</span>
+            <span class="info-val"><a href="https://linkedin.com/in/ismail-souifi" target="_blank">ismail-souifi ↗</a></span>
+          </div>
+          <div class="info-row">
+            <span class="info-lbl">GitHub</span>
+            <span class="info-val"><a href="https://github.com/ismvviil" target="_blank">ismvviil ↗</a></span>
+          </div>
+          <div class="info-row">
+            <span class="info-lbl" lang-fr>Téléphone</span><span class="info-lbl" lang-en>Phone</span>
+            <span class="info-val"><a href="tel:+212602079775">+212 6 02 07 97 75</a></span>
+          </div>
+          <div class="info-row">
+            <span class="info-lbl" lang-fr>Disponibilité</span><span class="info-lbl" lang-en>Availability</span>
+            <span class="info-val" style="color:var(--lime)" lang-fr>Stage / Alternance</span>
+            <span class="info-val" style="color:var(--lime)" lang-en>Internship / Work-study</span>
+          </div>
+        </div>
+
+        <div class="about-stats rv d4">
+          <div class="as-item">
+            <div class="num">5+</div>
+            <div class="lbl" lang-fr>Projets Académiques</div><div class="lbl" lang-en>Academic Projects</div>
+          </div>
+          <div class="as-item">
+            <div class="num">2</div>
+            <div class="lbl" lang-fr>Stages Pro</div><div class="lbl" lang-en>Internships</div>
+          </div>
+          <div class="as-item">
+            <div class="num">2</div>
+            <div class="lbl" lang-fr>Certifications</div><div class="lbl" lang-en>Certifications</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SKILLS
+══════════════════════════════════════════ -->
+<section id="skills">
+  <div class="wrap">
+    <p class="section-tag rv" lang-fr>Compétences Techniques</p>
+    <p class="section-tag rv" lang-en>Technical Skills</p>
+    <h2 class="section-h rv">
+      <span lang-fr>Mon <span class="hi">Stack</span></span>
+      <span lang-en>My <span class="hi">Stack</span></span>
+    </h2>
+    <div class="skills-layout">
+
+      <!-- Langages -->
+      <div class="skill-card rv">
+        <div class="skill-card-head">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <span class="skill-cat" lang-fr>Langages</span>
+          <span class="skill-cat" lang-en>Languages</span>
+        </div>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            C
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+            Java
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+            PHP
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            JavaScript
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            Python
+          </span>
+        </div>
+      </div>
+
+      <!-- Front-End -->
+      <div class="skill-card rv d1">
+        <div class="skill-card-head">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="skill-cat">Front-End</span>
+        </div>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            React
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+            Next.js
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+            Bootstrap
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+            Tailwind CSS
+          </span>
+        </div>
+      </div>
+
+      <!-- Back-End -->
+      <div class="skill-card rv d2">
+        <div class="skill-card-head">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="skill-cat">Back-End</span>
+        </div>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
+            Laravel
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            Node.js
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+            FastAPI
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
+            Spring Boot
+          </span>
+        </div>
+      </div>
+
+      <!-- Bases de Données -->
+      <div class="skill-card rv d3">
+        <div class="skill-card-head">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="skill-cat" lang-fr>Bases de Données</span>
+          <span class="skill-cat" lang-en>Databases</span>
+        </div>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+            PostgreSQL
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+            MongoDB
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            MySQL
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg" alt="Neo4j">
+            Neo4j
+          </span>
+        </div>
+      </div>
+
+      <!-- Tests & Qualité -->
+      <div class="skill-card rv">
+        <div class="skill-card-head">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3V5l-6-3-6 3v4c0 2-2 3-3 3 0 2 0 6 9 9 9-3 9-7 9-9z"/></svg>
+          </div>
+          <span class="skill-cat" lang-fr>Tests &amp; Qualité</span>
+          <span class="skill-cat" lang-en>Testing &amp; QA</span>
+        </div>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg" alt="JUnit">
+            JUnit
+          </span>
+          <span class="tag">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
+              <polyline points="9 11 12 14 22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+            TDD
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg" alt="SonarQube">
+            SonarQube
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira">
+            Jira
+          </span>
+        </div>
+      </div>
+
+      <!-- DevOps & Outils -->
+      <div class="skill-card rv d1">
+        <div class="skill-card-head">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+          </div>
+          <span class="skill-cat">DevOps &amp; Outils</span>
+        </div>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+            Git
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+            GitHub
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+            Docker
+          </span>
+          <span class="tag">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18"/><path d="M9 21V9"/>
+            </svg>
+            UML
+          </span>
+          <span class="tag">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Agile/Scrum
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   PROJECTS
+══════════════════════════════════════════ -->
+<section id="projects" class="alt">
+  <div class="wrap">
+    <p class="section-tag rv" lang-fr>Projets Académiques</p>
+    <p class="section-tag rv" lang-en>Academic Projects</p>
+    <h2 class="section-h rv">
+      <span lang-fr><span class="hi">Projets</span><br>Réalisés</span>
+      <span lang-en><span class="hi">Featured</span><br>Projects</span>
+    </h2>
+    <div class="projects-grid">
+
+      <article class="proj-card rv">
+        <div class="proj-cover"><span class="proj-num">01</span><div class="proj-cover-line"></div></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="ptag">React.js</span><span class="ptag">FastAPI</span><span class="ptag">PostgreSQL</span><span class="ptag">JWT</span></div>
+          <h3 class="proj-title" lang-fr>Plateforme Intelligente de Gestion de Stagiaires</h3>
+          <h3 class="proj-title" lang-en>Intelligent Internship Management Platform</h3>
+          <p class="proj-desc" lang-fr>Solution web complète avec algorithmes d'IA pour le matching stagiaire-offre, génération automatique de certificats avec QR Code, et authentification JWT multi-rôles.</p>
+          <p class="proj-desc" lang-en>Full web solution with AI matching algorithms for intern-offer pairing, automatic QR-code certificate generation, and multi-role JWT authentication.</p>
+          <a href="https://github.com/ismvviil" target="_blank" class="proj-link"><span lang-fr>Voir le projet</span><span lang-en>View project</span> →</a>
+        </div>
+      </article>
+
+      <article class="proj-card rv d1">
+        <div class="proj-cover"><span class="proj-num">02</span><div class="proj-cover-line"></div></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="ptag">React.js</span><span class="ptag">Flask</span><span class="ptag">Hugging Face</span><span class="ptag">CouchDB</span></div>
+          <h3 class="proj-title" lang-fr>Assistant Médical Intelligent</h3>
+          <h3 class="proj-title" lang-en>Intelligent Medical Assistant</h3>
+          <p class="proj-desc" lang-fr>Application intégrant l'IA pour l'analyse automatique des symptômes et la génération de diagnostics. Gestion complète des dossiers patients en base NoSQL.</p>
+          <p class="proj-desc" lang-en>AI-powered app for automatic symptom analysis and diagnostic generation. Full patient records management with a NoSQL database backend.</p>
+          <a href="https://github.com/ismvviil" target="_blank" class="proj-link"><span lang-fr>Voir le projet</span><span lang-en>View project</span> →</a>
+        </div>
+      </article>
+
+      <article class="proj-card rv d2">
+        <div class="proj-cover"><span class="proj-num">03</span><div class="proj-cover-line"></div></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="ptag">Power BI</span><span class="ptag">ETL</span><span class="ptag">Kaggle</span></div>
+          <h3 class="proj-title" lang-fr>Entrepôt de Données Hôtelier (BI)</h3>
+          <h3 class="proj-title" lang-en>Hotel Data Warehouse (BI)</h3>
+          <p class="proj-desc" lang-fr>Conception d'un data warehouse pour l'analyse des réservations hôtelières. Pipeline ETL, tableaux de bord Power BI interactifs et requêtes DAX avancées.</p>
+          <p class="proj-desc" lang-en>Data warehouse design for hotel booking analytics. ETL pipeline, interactive Power BI dashboards and advanced DAX queries.</p>
+          <a href="https://github.com/ismvviil" target="_blank" class="proj-link"><span lang-fr>Voir le projet</span><span lang-en>View project</span> →</a>
+        </div>
+      </article>
+
+      <article class="proj-card rv d3">
+        <div class="proj-cover"><span class="proj-num">04</span><div class="proj-cover-line"></div></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="ptag">Spring Boot</span><span class="ptag">MySQL</span><span class="ptag">React</span><span class="ptag">JPA/Hibernate</span></div>
+          <h3 class="proj-title" lang-fr>Simulateur de Potager Intelligent</h3>
+          <h3 class="proj-title" lang-en>Smart Garden Simulator</h3>
+          <p class="proj-desc" lang-fr>Application de simulation agricole avec gestion automatisée (irrigation, croissance). Architecture 3-tiers avec API REST et interfaces utilisateur dynamiques.</p>
+          <p class="proj-desc" lang-en>Agricultural simulation with automated irrigation and growth management. 3-tier architecture with REST API and dynamic user interfaces.</p>
+          <a href="https://github.com/ismvviil" target="_blank" class="proj-link"><span lang-fr>Voir le projet</span><span lang-en>View project</span> →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   EXPERIENCE
+══════════════════════════════════════════ -->
+<section id="experience">
+  <div class="wrap">
+    <p class="section-tag rv" lang-fr>Expérience Professionnelle</p>
+    <p class="section-tag rv" lang-en>Professional Experience</p>
+    <h2 class="section-h rv">
+      <span lang-fr><span class="hi">Expériences</span><br>Pro</span>
+      <span lang-en><span class="hi">Work</span><br>Experience</span>
+    </h2>
+    <div class="timeline">
+
+      <div class="tl-item rv">
+        <div class="tl-dot"></div>
+        <div class="tl-period" lang-fr>Juil. — Août 2024</div>
+        <div class="tl-period" lang-en>Jul — Aug 2024</div>
+        <div class="tl-title" lang-fr>Stagiaire Développeur WordPress</div>
+        <div class="tl-title" lang-en>WordPress Developer Intern</div>
+        <div class="tl-company">HaGroup &nbsp;·&nbsp; Marrakech</div>
+        <p class="tl-desc" lang-fr>Gestion et optimisation d'un site WordPress : mise à jour de contenus, création de pages personnalisées, installation et configuration de plugins pour améliorer les fonctionnalités du site.</p>
+        <p class="tl-desc" lang-en>Managed and optimized a WordPress website: content updates, custom page creation, plugin installation and configuration to improve site functionality.</p>
+      </div>
+
+      <div class="tl-item rv d1">
+        <div class="tl-dot"></div>
+        <div class="tl-period" lang-fr>Avr. — Mai 2024</div>
+        <div class="tl-period" lang-en>Apr — May 2024</div>
+        <div class="tl-title" lang-fr>Stagiaire Développeur Web Full-Stack</div>
+        <div class="tl-title" lang-en>Full-Stack Web Developer Intern</div>
+        <div class="tl-company">AlloBaba Agency &nbsp;·&nbsp; Marrakech</div>
+        <p class="tl-desc" lang-fr>Développement d'une application web de gestion de services. Modélisation UML, développement front-end avec React.js et Tailwind CSS, collaboration en équipe via GitHub.</p>
+        <p class="tl-desc" lang-en>Developed a service management web application. UML modeling, front-end development with React.js and Tailwind CSS, team collaboration via GitHub.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   EDUCATION
+══════════════════════════════════════════ -->
+<section id="education" class="alt">
+  <div class="wrap">
+    <p class="section-tag rv" lang-fr>Parcours Académique</p>
+    <p class="section-tag rv" lang-en>Academic Background</p>
+    <h2 class="section-h rv">
+      <span lang-fr><span class="hi">Formation</span></span>
+      <span lang-en><span class="hi">Education</span></span>
+    </h2>
+    <div class="edu-grid">
+      <div class="edu-card rv">
+        <div class="edu-year">2025 — 2027</div>
+        <div class="edu-degree" lang-fr>Master Qualité du Logiciel (MQL)</div>
+        <div class="edu-degree" lang-en>Master's in Software Quality (MQL)</div>
+        <div class="edu-school">Faculté des Sciences<br><span>Fès, Maroc</span></div>
+      </div>
+      <div class="edu-card rv d1">
+        <div class="edu-year">2024 — 2025</div>
+        <div class="edu-degree" lang-fr>Licence ISR — Ingénierie des Systèmes d'Information et Réseaux</div>
+        <div class="edu-degree" lang-en>Bachelor's in Information Systems &amp; Networks Engineering</div>
+        <div class="edu-school">École Supérieure de Technologie<br><span>Safi, Maroc</span></div>
+      </div>
+      <div class="edu-card rv d2">
+        <div class="edu-year">2022 — 2024</div>
+        <div class="edu-degree" lang-fr>Technicien Spécialisé en Développement Digital</div>
+        <div class="edu-degree" lang-en>Specialized Technician in Digital Development</div>
+        <div class="edu-school">ISTA NTIC SYBA<br><span>Marrakech, Maroc</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   CERTIFICATIONS
+══════════════════════════════════════════ -->
+<section id="certifications">
+  <div class="wrap">
+    <p class="section-tag rv">Certifications</p>
+    <h2 class="section-h rv">
+      <span class="hi" lang-fr>Certifications</span>
+      <span class="hi" lang-en>Certifications</span>
+      <br><span style="color:var(--text)" lang-fr>& Badges</span>
+      <span style="color:var(--text)" lang-en>&amp; Badges</span>
+    </h2>
+    <div class="certs-grid">
+
+      <div class="cert-card rv">
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-issuer">Udemy</div>
+          <div class="cert-name">Scrum Master Certification 2025 + Agile Scrum Certification</div>
+          <div class="cert-meta" lang-fr>Novembre 2025</div>
+          <div class="cert-meta" lang-en>November 2025</div>
+          <div class="cert-skills">
+            <span>Scrum</span><span>Agile Methodologies</span><span>Software Project Management</span>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-badge-verified">
+              <svg viewBox="0 0 24 24" width="11" height="11" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span lang-fr>Vérifié</span><span lang-en>Verified</span>
+            </div>
+            <a href="https://www.udemy.com/certificate/UC-399c3adf-d452-4382-b6bf-4907574c4c0b/" target="_blank" class="cert-btn">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span lang-fr>Voir le certificat</span><span lang-en>Show credential</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card rv d1">
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-issuer">Cisco</div>
+          <div class="cert-name">CCNA: Introduction to Networks</div>
+          <div class="cert-meta" lang-fr>Juin 2025</div>
+          <div class="cert-meta" lang-en>June 2025</div>
+          <div class="cert-skills">
+            <span>Networking</span><span>Cisco IOS</span><span>TCP/IP</span>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-badge-verified">
+              <svg viewBox="0 0 24 24" width="11" height="11" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span lang-fr>Vérifié</span><span lang-en>Verified</span>
+            </div>
+            <a href="https://www.credly.com/badges/37f1f208-7a2b-4a52-9ea2-4da14ac032cc/linked_in_profile" target="_blank" class="cert-btn">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span lang-fr>Voir le certificat</span><span lang-en>Show credential</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   LANGUAGES + INTERESTS
+══════════════════════════════════════════ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="lang-interests-grid">
+
+      <!-- Languages -->
+      <div>
+        <p class="section-tag rv" lang-fr>Langues</p>
+        <p class="section-tag rv" lang-en>Languages</p>
+        <h2 class="section-h rv" style="font-size:clamp(1.8rem,3vw,2.8rem)">
+          <span lang-fr><span class="hi">Langues</span><br>Parlées</span>
+          <span lang-en><span class="hi">Languages</span><br>Spoken</span>
+        </h2>
+        <div class="langs-row">
+          <div class="lang-card rv">
+            <div class="lang-flag">🇲🇦</div>
+            <div class="lang-name" lang-fr>Arabe</div><div class="lang-name" lang-en>Arabic</div>
+            <div class="lang-level-badge" lang-fr>Maternelle</div><div class="lang-level-badge" lang-en>Native</div>
+            <div class="lang-bar-bg"><div class="lang-bar-fill" data-w="100%"></div></div>
+          </div>
+          <div class="lang-card rv d1">
+            <div class="lang-flag">🇫🇷</div>
+            <div class="lang-name" lang-fr>Français</div><div class="lang-name" lang-en>French</div>
+            <div class="lang-level-badge">B2 — DELF</div>
+            <div class="lang-bar-bg"><div class="lang-bar-fill" data-w="75%"></div></div>
+          </div>
+          <div class="lang-card rv d2">
+            <div class="lang-flag">🇬🇧</div>
+            <div class="lang-name" lang-fr>Anglais</div><div class="lang-name" lang-en>English</div>
+            <div class="lang-level-badge">B2</div>
+            <div class="lang-bar-bg"><div class="lang-bar-fill" data-w="72%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div>
+        <p class="section-tag rv" lang-fr>Engagements &amp; Intérêts</p>
+        <p class="section-tag rv" lang-en>Interests &amp; Activities</p>
+        <h2 class="section-h rv" style="font-size:clamp(1.8rem,3vw,2.8rem)">
+          <span class="hi">Passions</span>
+        </h2>
+        <p class="rv d1" style="font-size:.9rem;color:var(--text-2);line-height:1.75;margin-bottom:1.5rem" lang-fr>Membre actif de clubs universitaires, je m'engage autant dans le code que dans mes passions créatives.</p>
+        <p class="rv d1" style="font-size:.9rem;color:var(--text-2);line-height:1.75;margin-bottom:1.5rem" lang-en>Active member of university clubs, I engage as much in code as in my creative and community passions.</p>
+        <div class="interests-row rv d2">
+          <span class="interest-pill"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> <span lang-fr>Photographie</span><span lang-en>Photography</span></span>
+          <span class="interest-pill"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span lang-fr>Cybersécurité</span><span lang-en>Cybersecurity</span></span>
+          <span class="interest-pill"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> <span lang-fr>Intelligence Artificielle</span><span lang-en>Artificial Intelligence</span></span>
+          <span class="interest-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <span>Open Source</span></span>
+          <span class="interest-pill"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> <span lang-fr>Qualité Logicielle</span><span lang-en>Software Quality</span></span>
+          <span class="interest-pill"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> <span>Business Intelligence</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   RECOMMENDATIONS
+══════════════════════════════════════════ -->
+<section id="recommendations">
+  <div class="wrap">
+    <p class="section-tag rv" lang-fr>Recommandations</p>
+    <p class="section-tag rv" lang-en>References</p>
+    <h2 class="section-h rv">
+      <span lang-fr>Ce qu'ils<br><span class="hi">Disent</span></span>
+      <span lang-en>What They<br><span class="hi">Say</span></span>
+    </h2>
+
+    <div class="reco-grid">
+
+      <!-- ─── Lettre 1 : M. Belmouss — ISTA NTIC ─── -->
+      <div class="reco-card rv">
+        <div class="reco-quote">"</div>
+
+        <div class="reco-header">
+          <div class="reco-avatar">BB</div>
+          <div class="reco-header-info">
+            <div class="reco-author-name">M. Belmouss Badr Eddine</div>
+            <div class="reco-author-title" lang-fr>Formateur Développement Web Full Stack</div>
+            <div class="reco-author-title" lang-en>Full Stack Web Development Trainer</div>
+            <div class="reco-company">ISTA NTIC Sidi Youssef Ben Ali · Marrakech</div>
+            <div class="reco-meta">
+              <span class="reco-date">Sept. 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="reco-intro" lang-fr>En tant que formateur à l'ISTA NTIC, j'ai eu l'honneur d'avoir M. Ismail Souifi comme stagiaire — un profil qui m'a particulièrement marqué.</p>
+        <p class="reco-intro" lang-en>As a trainer at ISTA NTIC, I had the honour of supervising M. Ismail Souifi as an intern — a profile that stood out to me.</p>
+
+        <ul class="reco-points">
+          <li lang-fr>Assidu, curieux et enthousiaste — travail de qualité constant en exercices individuels et collectifs.</li>
+          <li lang-en>Diligent, curious and enthusiastic — consistently quality work in both individual and group exercises.</li>
+          <li lang-fr>Élément moteur de sa classe, très créatif avec un étonnant esprit de synthèse et d'analyse.</li>
+          <li lang-en>A driving force in his class, highly creative with a remarkable analytical and synthesis mindset.</li>
+          <li lang-fr>Dynamisme constant et tempérament enjoué, déterminé à atteindre ses objectifs.</li>
+          <li lang-en>Constant energy and positive attitude, clearly determined to reach his goals.</li>
+        </ul>
+
+        <div class="reco-conclusion" lang-fr>M. Souifi réunit à mon humble avis tous les atouts qui feront de lui un élément <strong>fiable et efficace</strong> au sein de votre entreprise.</div>
+        <div class="reco-conclusion" lang-en>M. Souifi brings together all the qualities that will make him a <strong>reliable and effective</strong> asset within your organisation.</div>
+
+        <div class="reco-footer">
+          <div class="reco-contact">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.35h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.96-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16c.1.31.143.634.13.92z"/></svg>
+            ISTA NTIC, Marrakech
+          </div>
+          <a href="YOUR_LETTER_1_LINK" target="_blank" class="reco-btn">
+            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span lang-fr>Voir la lettre</span><span lang-en>View letter</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ─── Lettre 2 : EL Abdellaoui Said — EST Safi ─── -->
+      <div class="reco-card rv d1">
+        <div class="reco-quote">"</div>
+
+        <div class="reco-header">
+          <div class="reco-avatar">ES</div>
+          <div class="reco-header-info">
+            <div class="reco-author-name">EL Abdellaoui Said</div>
+            <div class="reco-author-title" lang-fr>Professeur Informatique — Java Avancé</div>
+            <div class="reco-author-title" lang-en>Computer Science Professor — Advanced Java</div>
+            <div class="reco-company">EST Safi · Université Cadi Ayyad</div>
+            <div class="reco-meta">
+              <span class="reco-date">2025</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="reco-intro" lang-fr>M. Ismail Souifi a suivi sa licence ISIR au sein de l'Université Cadi Ayyad, EST Safi. En tant que professeur de Java avancé, j'atteste de son implication remarquable.</p>
+        <p class="reco-intro" lang-en>M. Ismail Souifi completed his ISIR bachelor's at Cadi Ayyad University, EST Safi. As his Advanced Java professor, I can attest to his remarkable commitment.</p>
+
+        <ul class="reco-points">
+          <li lang-fr>Grande implication démontrée en Java avancé — contenu scientifique pertinent et bien structuré.</li>
+          <li lang-en>Strong involvement in advanced Java — scientifically relevant and well-structured work.</li>
+          <li lang-fr>Sens des responsabilités attestant d'une réelle faculté à évoluer en programmation.</li>
+          <li lang-en>A sense of responsibility reflecting a genuine ability to grow as a developer.</li>
+          <li lang-fr>Déterminé à poursuivre ses études à l'étranger, profil recommandé avec confiance.</li>
+          <li lang-en>Determined to pursue advanced studies abroad — a profile I recommend with full confidence.</li>
+        </ul>
+
+        <div class="reco-conclusion" lang-fr>M. Ismail Souifi est véritablement un élément <strong>précieux, consciencieux, créatif et dynamique</strong>, dont je recommande chaleureusement la candidature.</div>
+        <div class="reco-conclusion" lang-en>M. Ismail Souifi is truly a <strong>valuable, conscientious, creative and dynamic</strong> individual — I warmly recommend his application.</div>
+
+        <div class="reco-footer">
+          <div class="reco-contact">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.35h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.96-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16c.1.31.143.634.13.92z"/></svg>
+            (+212) 5 24 62 50 53
+          </div>
+          <a href="YOUR_LETTER_2_LINK" target="_blank" class="reco-btn">
+            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            <span lang-fr>Voir la lettre</span><span lang-en>View letter</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════ -->
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="contact-inner">
+      <p class="section-tag rv" style="justify-content:center">Contact</p>
+      <h2 class="contact-h rv">
+        <span lang-fr>Travaillons<br><span class="hi">Ensemble</span></span>
+        <span lang-en>Let's Build<br><span class="hi">Together</span></span>
+      </h2>
+      <p class="contact-sub rv d1" lang-fr>Vous avez un projet, une opportunité de stage, ou simplement envie d'échanger ? Je suis disponible et enthousiaste à l'idée de collaborer sur des projets innovants.</p>
+      <p class="contact-sub rv d1" lang-en>Have a project, an internship opportunity, or just want to chat? I'm available and excited to collaborate on innovative projects.</p>
+
+      <div class="contact-btns rv d2">
+        <a href="mailto:souifiismail@gmail.com" class="btn btn-lime">
+          <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span lang-fr>Envoyer un email</span><span lang-en>Send an Email</span>
+        </a>
+        <a href="https://linkedin.com/in/ismail-souifi" target="_blank" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn ↗
+        </a>
+        <a href="https://github.com/ismvviil" target="_blank" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub ↗
+        </a>
+      </div>
+
+      <div class="contact-info-strip rv d3">
+        <div class="ci-item">
+          <span class="ci-lbl" lang-fr>Téléphone</span><span class="ci-lbl" lang-en>Phone</span>
+          <span class="ci-val"><a href="tel:+212602079775">+212 6 02 07 97 75</a></span>
+        </div>
+        <div class="ci-item">
+          <span class="ci-lbl">Email</span>
+          <span class="ci-val"><a href="mailto:souifiismail@gmail.com">souifiismail@gmail.com</a></span>
+        </div>
+        <div class="ci-item">
+          <span class="ci-lbl" lang-fr>Localisation</span><span class="ci-lbl" lang-en>Location</span>
+          <span class="ci-val">Fès, Maroc 🇲🇦</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <p lang-fr>© 2025 <span>Ismail Souifi</span>. Conçu avec précision.</p>
+  <p lang-en>© 2025 <span>Ismail Souifi</span>. Crafted with precision.</p>
+  <p><span>Fès, Maroc 🇲🇦</span></p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
